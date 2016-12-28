@@ -1,4 +1,4 @@
-# Rocket-Chat-Inverted
+# Rocket Chat Inverted
 A dark theme for Rocket Chat
 
 ## Preview
