@@ -5,7 +5,7 @@ Created by: JakeBathman
 Based on: https://userstyles.org/styles/133150/rocketchat-dark
 Repository: https://github.com/jakebathman/Rocket-Chat-Inverted
 Licence: MIT
-Version: v1.0.0 
+Version: v1.0.1
 
 ***********/
 
@@ -477,15 +477,15 @@ aside .footer {
 }
 
 .side-nav .rooms-list {
-    height: calc(100% - 0px);
+    height: calc(100% - 60px);
 }
 
 .account-box .options {
-    height: calc(100% - 0px);
+    height: calc(100% - 60px);
 }
 
 .flex-nav .content {
-    height: calc(100% - 0px);
+    height: calc(100% - 60px);
 }
 
 
