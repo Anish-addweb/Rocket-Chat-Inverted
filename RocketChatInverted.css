@@ -412,7 +412,8 @@ input[readonly], input[disabled], textarea[readonly], textarea[disabled] {
 }
 
 ul.reactions li.selected {
-    background-color: #464646 !important;
+    background-color: #383838 !important;
+    border-color: #b5b5b5 !important;
 }
 
 ul.reactions li:not(.selected) {
