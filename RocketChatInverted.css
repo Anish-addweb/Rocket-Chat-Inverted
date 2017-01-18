@@ -5,7 +5,7 @@ Created by: JakeBathman
 Based on: https://userstyles.org/styles/133150/rocketchat-dark
 Repository: https://github.com/jakebathman/Rocket-Chat-Inverted
 Licence: MIT
-Version: v1.0.3
+Version: v1.1.0
 
 ***********/
 
@@ -51,11 +51,11 @@ code {
     color: #CDCDCD;
 }
 
-.messages-box ul > li.message:nth-child(odd) {
+.messages-box ul>li.message:nth-child(odd) {
     background-color: #252525;
 }
 
-.messages-box ul > li.message:nth-child(even) {
+.messages-box ul>li.message:nth-child(even) {
     background-color: #252525;
 }
 
@@ -538,4 +538,126 @@ aside .footer {
 
 .message .body {
     color: #CDCDCD;
+}
+
+
+/*  Syntax highlighting fixes    */
+
+
+/* Color everything poorly, for development */
+
+
+/*span[class*="hljs-"]{
+    color:#A0699B;
+}*/
+
+.hljs, code {
+    color: #D4D4D4;
+    font-weight: normal !important;
+}
+
+.hljs-keyword, .hljs-common {
+    color: #F4F4F4 !important;
+    font-weight: bold;
+}
+
+.hljs-string {
+    color: #FF4574 !important;
+}
+
+.hljs-literal, .hljs-number {
+    color: #6FD1FF !important;
+}
+
+.hljs-tag {
+    color: #CCCCCC !important;
+}
+
+.hljs-comment, .hljs-shebang, .hljs-preprocessor {
+    color: #BABABA !important;
+}
+
+.hljs-variable {
+    color: #FFBF35 !important;
+}
+
+.hljs-built_in {
+    color: #f754d2 !important;
+}
+
+.hljs-title {
+    color: #F4F4F4 !important;
+}
+
+.hljs-attr_selector {
+    color: #FFFFFF !important;
+}
+
+.hljs-attribute {
+    color: #FFBF35 !important;
+}
+
+.hljs-value {
+    color: #ccc !important;
+}
+
+.hljs-function {
+    color: #EDE62A !important;
+}
+
+.hljs-params {
+    color: #47FEC8 !important;
+}
+
+.hljs-deletion {
+    background-color: #852B2B !important;
+}
+
+.hljs-addition {
+    background-color: #226922 !important;
+}
+
+.hljs-change {
+    background-color: #157696 !important;
+}
+
+.hljs-header, .hljs-bullet, .hljs-blockquote {
+    color: #999999 !important;
+}
+
+.hljs-chunk {
+    color: #aaaaaa !important;
+}
+
+.hljs-request {
+    color: #CCCCCC !important;
+}
+
+.hljs-prompt {
+    color: #999999 !important;
+}
+
+.hljs-constant {
+    color: #47FEC8 !important;
+}
+
+.hljs-subst {
+    color: #CCCCCC !important;
+}
+
+.hljs-regexp {
+    color: #51e075 !important;
+}
+
+.hljs-strong {
+    font-weight: bold;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-pseudo, .hljs-hexcolor {
+    color: #47FEC8 !important;
+    font-style: italic;
 }
