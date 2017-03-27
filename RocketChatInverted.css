@@ -5,7 +5,7 @@ Created by: JakeBathman
 Based on: https://userstyles.org/styles/133150/rocketchat-dark
 Repository: https://github.com/jakebathman/Rocket-Chat-Inverted
 Licence: MIT
-Version: v1.1.0
+Version: v1.1.1
 
 ***********/
 
@@ -660,4 +660,15 @@ aside .footer {
 .hljs-pseudo, .hljs-hexcolor {
     color: #47FEC8 !important;
     font-style: italic;
+}
+
+
+/*  Fix background blues at login and refresh  */
+
+.full-page {
+    background-image: linear-gradient(#1e2123, #131415);
+}
+
+body {
+    background-color: #131415;
 }
