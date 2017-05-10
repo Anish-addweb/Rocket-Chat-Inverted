@@ -5,7 +5,8 @@ Created by: JakeBathman
 Based on: https://userstyles.org/styles/133150/rocketchat-dark
 Repository: https://github.com/jakebathman/Rocket-Chat-Inverted
 Licence: MIT
-Version: v1.1.1
+Version: v1.2.0
+RocketChat Latest Version Supported: v0.55.1
 
 ***********/
 
@@ -27,6 +28,10 @@ code {
 
 .side-nav .unread {
     background-color: #6D6D6D !important;
+}
+
+.side-nav .unread-rooms.bottom-unread-rooms {
+    bottom: 0px;
 }
 
 .side-nav .footer {
@@ -187,7 +192,7 @@ div.body a {
 }
 
 .message .message-dropdown {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: #171717;
     border: 1px solid #555555;
 }
 
@@ -195,7 +200,7 @@ div.body a {
 /* ---Made message edit options dark on selection and highlight--- */
 
 .message .message-dropdown ul li:hover, .message .message-dropdown ul li:first-child {
-    background-color: #1d1c1c;
+    background-color: #000000;
 }
 
 
@@ -278,6 +283,21 @@ textarea, select, input[type='text'], input[type='number'], input[type='email'],
     background-color: #131313;
     color: white;
     border-radius: 0px;
+}
+
+
+/* Primary background color */
+
+.primary-background-color {
+    background-color: #171717;
+}
+
+
+/* Global search box results pane */
+
+.message-popup.search-results-list {
+    background-color: #0c0c0c;
+    height: calc(100vh - 100px);
 }
 
 
@@ -369,35 +389,12 @@ input[readonly], input[disabled], textarea[readonly], textarea[disabled] {
     color: #068fe4;
 }
 
-.first-unread .body::before {
-    background-color: #2c7fc6;
-    left: 20px;
-    height: 1px;
+.first-unread .body::before, .cozy .first-unread .body::before, .compact .first-unread .body::before, .first-unread.first-unread-opaque .body::before {
+    background-color: rgba(44, 127, 198, .3);
 }
 
-.first-unread .body::after {
-    color: #ffffff;
-    background-color: #2c7fc6;
-    content: "UNREAD MESSAGES";
-    display: block;
-    position: absolute;
-    right: 0;
-    top: -15px;
-    font-size: 11px;
-    line-height: 17px;
-    padding: 1px 6px;
-    -webkit-transition: color 0.5s linear;
-    transition: color 0.5s linear;
-    left: inherit;
-}
-
-.first-unread.first-unread-opaque .body::before {
-    background-color: #2c7fc6;
-}
-
-.first-unread.first-unread-opaque .body::after {
-    color: #ffffff;
-    background-color: #2c7fc6;
+.first-unread .body::after, .first-unread.first-unread-opaque .body::after {
+    color: #fff;
 }
 
 
@@ -457,7 +454,7 @@ ul.reactions li:not(.selected) {
 
 /* ---Text highlight styling--- */
 
-.highlight-text {
+.highlight-text, .message .highlight-text {
     background-color: #efdd62;
     color: #000000;
 }
@@ -482,7 +479,7 @@ aside .footer {
 }
 
 .side-nav .rooms-list {
-    height: calc(100% - 60px);
+    height: calc(100% - 100px);
 }
 
 .account-box .options {
@@ -490,7 +487,7 @@ aside .footer {
 }
 
 .flex-nav .content {
-    height: calc(100% - 60px);
+    height: calc(100% - 100px);
 }
 
 
@@ -544,12 +541,20 @@ aside .footer {
 /*  Syntax highlighting fixes    */
 
 
-/* Color everything poorly, for development */
+/* 
+Color everything poorly, for development 
 
-
-/*span[class*="hljs-"]{
+span[class*="hljs-"]{
     color:#A0699B;
-}*/
+}
+*/
+
+.code-colors {
+    background-color: #1f1f1f;
+    color: #D4D4D4;
+    border-color: #636363;
+    font-weight: normal !important;
+}
 
 .hljs, code {
     color: #D4D4D4;
@@ -671,4 +676,18 @@ aside .footer {
 
 body {
     background-color: #131415;
+}
+
+
+/* Fix issue when viewing non-styled pages, such as /api/info */
+
+body:not([class]) {
+    background-color: #fff;
+}
+
+
+/* Quoted text left bar */
+
+.background-transparent-darker-before::before {
+    background-color: #616161;
 }
