@@ -297,6 +297,7 @@ textarea, select, input[type='text'], input[type='number'], input[type='email'],
 
 .message-popup.search-results-list {
     background-color: #0c0c0c;
+    height: calc(100vh - 100px);
 }
 
 
